@@ -22,8 +22,6 @@
   background-color: green;
 }
 
-
-
 [data-tooltip]::after {
   content: attr(data-tooltip);
   visibility: hidden;
@@ -36,10 +34,36 @@
 
   background-color: rgb(128, 123, 123);
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
 }
 
 [data-tooltip]:hover::after {
   visibility: visible;
 }
+
+.link {
+  display: flex;
+  flex-direction: column;
+}
+[href] {
+  display: block;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgb(0, 255, 234);
+  color: aqua;
+  background-color: rgb(255, 115, 0);
+  padding: 10px;
+  margin: 10px;
+}
+
+a[href="example"] {
+  background-color: green;
+}
+a[href^="http"] {
+  background-color: yellow;
+}
+a[href$="ruu"] {
+  background-color: rgb(255, 0, 191);
+}
+
+
 
