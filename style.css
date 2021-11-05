@@ -1,0 +1,45 @@
+.important::before {
+  content: '!!!';
+  color: red;
+}
+.important::after {
+  content: '!!!';
+  color: blue;
+}
+
+.smile::before {
+  content: '!!!';
+  color: red;
+}
+.smile::after {
+  content: '!!!';
+  color: blue;
+  background-color:green ;
+}
+
+[data-tooltip] {
+  position: relative;
+  background-color: green;
+}
+
+
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  visibility: hidden;
+  position: absolute;
+
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60%;
+
+  background-color: rgb(128, 123, 123);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+[data-tooltip]:hover::after {
+  visibility: visible;
+}
+
