@@ -67,3 +67,36 @@ a[href$="ruu"] {
 
 
 
+.link-nav p {
+  background-color: blueviolet;
+  display: inline-block;
+}
+
+
+[data-tip] {
+  position: relative;
+  background-color: brown;
+}
+[data-tip]::before {
+  content: attr(data-tip);
+  position: absolute;
+  top: 15px;
+  left: -10px;
+  visibility: hidden;
+  width: 115px;
+  background-color: aqua;
+}
+[data-tip]::first-letter{
+  color: red;
+}
+
+[data-tip]:hover::before {
+  visibility: visible;
+}
+.link-nav ::before {
+  color: red;
+}
+
+.link-nav em.page55::before {
+  background-color: rgb(17, 0, 255);
+}
